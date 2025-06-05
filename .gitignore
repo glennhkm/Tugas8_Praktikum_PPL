@@ -1,0 +1,27 @@
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# products/migrations/__pycache__/
+
+# VSCode settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Environment variable file
+.env
+
+staticfiles/
+static_root/
