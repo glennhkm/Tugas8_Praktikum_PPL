@@ -1,0 +1,6 @@
+django
+mysqlclient
+supabase
+python-dotenv
+djangorestframework-simplejwt
+python-magic
