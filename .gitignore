@@ -25,3 +25,4 @@ Thumbs.db
 
 staticfiles/
 static_root/
+.vercel

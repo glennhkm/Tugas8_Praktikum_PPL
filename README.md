@@ -16,6 +16,7 @@ A Django web application for managing electronic products inventory with CRUD op
 - Success messages for all operations
 - Responsive design for all devices
 - MySQL database integration
+- CI/CD with GitHub and Vercel
 
 ## Project Structure
 
@@ -62,19 +63,28 @@ static/                    # Static files
 ├── css/                   # CSS files
 │   └── style.css          # Custom styles
 └── js/                    # JavaScript files
+
+# Deployment files
+vercel_wsgi.py             # Custom WSGI file for Vercel
+vercel.json                # Vercel configuration
+deploy_complete.sh         # Deployment script
+.github/workflows/         # GitHub Actions workflows for CI/CD
 ```
 
 ## Technologies Used
 
-- Django 5.2
+- Django 5.0
 - MySQL
 - Supabase (for image storage)
 - JWT Authentication
 - Bootstrap 5 (for UI components)
 - Python-dotenv (for environment variables)
 - Django REST Framework with SimpleJWT
+- PyMySQL (for database connectivity)
+- GitHub Actions (for CI/CD)
+- Vercel (for hosting)
 
-## Setup and Installation
+## Local Setup and Installation
 
 1. Clone the repository
 2. Create a virtual environment:
@@ -93,7 +103,13 @@ static/                    # Static files
 5. Configure the database in `electronic_store/settings.py`
 6. Create a `.env` file with the following variables:
    ```
-   JWT_SECRET=your_jwt_secret_key
+   DB_NAME=your_database_name
+   DB_USER=your_database_user
+   DB_PASSWORD=your_database_password
+   DB_HOST=your.aws.mysql.endpoint
+   DB_PORT=3306
+   DJANGO_INSECURE_SECRET_KEY=your_secret_key
+   JWT_SECRET=your_jwt_secret
    SUPABASE_URL=your_supabase_url
    SUPABASE_KEY=your_supabase_key
    ```
@@ -111,6 +127,10 @@ static/                    # Static files
    python manage.py runserver
    ```
 10. Access the application at http://127.0.0.1:8000/
+
+## Deployment
+
+This application can be deployed to Vercel using either manual deployment or CI/CD with GitHub. For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Usage
 
